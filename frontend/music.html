@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/4.0.1/wavesurfer.min.js"></script>
+    <link rel="stylesheet" href="music.css">
+</head>
+
+<body>
+    <div class="music-player" id="music-player-container">
+        <div class="player-header">
+            <h1 class="music-heading">Music Player</h1>
+            <div class="disk" id="disk">
+                <img src="" id="album-cover" class="album-img"/>
+            </div>
+            <div class="container" id="container">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+        </div>
+        <div class="song-info">
+            <h2 id="song-title">Song Title</h2>
+            <p id="artist">Artist Name</p>
+        </div>
+        <div class="slider_container">
+            <i class="fa fa-volume-down"></i>
+            <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+            <i class="fa fa-volume-up"></i>
+        </div>
+        <div class="music-bar">
+            <div class="progress-bar" id="progress">
+            </div>
+           <audio id="audio-element" src="./assets//song1.mp3" controls></audio>
+        </div>
+        <div class="player-controls">
+            <button id="prev-btn">&laquo;</button>
+            <button id="play-pause-btn">&#9658;</button>
+            <button id="next-btn">&raquo;</button>
+        </div>
+
+        <div id="wave">
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+        </div>
+    </div>
+
+    <script src="music.js"></script>
+</body>
+
+</html>
